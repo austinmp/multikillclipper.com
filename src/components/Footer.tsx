@@ -1,5 +1,9 @@
-export function Footer() {
+type FooterProps = {
+    className?: string;
+}
+
+export default function Footer({ className }: FooterProps) {
     return (
-        <div></div>
+        <footer className={className}> Footer Content </footer>
     )
 }

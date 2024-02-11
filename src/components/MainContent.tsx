@@ -1,5 +1,9 @@
-export function MainContent() {
+type MaintContentProps = {
+    className?: string;
+}
+
+export default function MainContent({ className }: MaintContentProps) {
     return (
-        <div></div>
+        <div className={className}>Main Content</div>
     )
 }
