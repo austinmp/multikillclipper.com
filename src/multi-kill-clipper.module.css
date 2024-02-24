@@ -1,29 +1,36 @@
 :root {
   --secondary-color: #F5F5F5;
-  /* --secondary-gradient: linear-gradient(to bottom right, #C973FF, #AEBAF8); */
   --default-font-family: 'DM Sans', sans-serif;
   --subtitle-font-family: 'Inter', sans-serif;
   --primary-color: rgb(133, 85, 210);
+  --primary-color-hover: rgba(84, 83, 83, 0.22);
+  --button-border-color: rgb(133, 85, 210);
+  --primary-font-color: #212121;
+  --btn-height: 75px;
+  --btn-width: 275px;
+  --divider-margin: 5vh;
 }
-
-/* Wraps entire app
-.container {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  width: 100vw;
-  background-color: blue;
-  justify-content: flex-start; */
-/* background-image: linear-gradient(to left, #9d89ec, #705FEB); */
 
 .app {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  width: 100%;
   min-height: 100vh;
-  color: var(--primary-color);
-  font-family: var(--subtitle-font-family)
-    /* background-image: linear-gradient(to left, #9d89ec, #705FEB); */
+  flex-grow: 1;
+
+  /* Makes the container take full width of its parent */
+  padding: 0 5%;
+  /* Applies padding to the sides, effectively creating margins */
+  box-sizing: border-box;
+  /* Ensures padding is included in the total width calculation */
 }
+
+.header.header {
+  background-color: white;
+  padding: 0 5vw;
+}
+
 
 /* Ensure the content area expands */
 .mainContent {
@@ -31,43 +38,291 @@
   padding: 20px;
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  height: auto;
 }
+
+
 
 .downloadBtn.downloadBtn {
-  background-color: var(--primary-color);
+  color: #fff;
+  background: linear-gradient(90deg, #a357ff 0, #8555d2);
+  box-shadow: 0 4px 17px 0 var(--primary-color);
   text-transform: none;
-  padding: 10px 100px;
+  padding: 20px 200px;
+  width: var(--btn-width);
+  height: var(--btn-height);
+  justify-self: center;
 }
 
-/* Basic styling for header, footer, and hero section */
-.header {}
+
+
 
 .headerToolbar {
-  background-color: white;
-  color: var(--primary-color);
+  color: var(--primary-font-color);
+  height: 75px;
+  display: flex;
+  flex-direction: row;
+  align-content: space-between;
+  justify-content: space-between;
 }
 
-.heroSection {
-  background-color: #ddd;
-  padding: 100px 250px 250px 250px;
-  text-align: center;
-  color: rgb(33, 33, 33);
-  font-size: 22px;
 
-  font-family: var(--subtitle-font-family)
+.heroSection {
+  display: flex;
+  flex-direction: row;
+  padding-top: 15vh;
+  padding-bottom: 15vh;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 100px;
+}
+
+.downloadCtn {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: flex-start;
+  width: 40%;
+  row-gap: 30px;
+}
+
+
+.footer.footer {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  justify-content: center;
+  padding-bottom: 30px;
+  gap: 30px;
+}
+
+.gitHubIcon {
+  padding-left: 10px;
+  padding-right: 10px;
+
+}
+
+
+
+.headerBtn.headerBtn {
+  color: var(--primary-color);
+  background-color: white;
+  border-radius: 10px;
+  max-width: 40px;
+  max-height: 40px;
+  min-width: 40px;
+  min-height: 40px;
+  border: 0.5px solid rgb(133, 85, 210);
+  width: fit-content;
+}
+
+.headerBtn.headerBtn:hover {
+  color: white;
+  background-color: var(--primary-color);
+  text-transform: none;
+  border-color: var(--primary-color)
 }
 
 .footer {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px
+}
+
+.disclaimer {
+  color: var(--primary-font-color);
+  display: flex;
   justify-content: center;
-  height: 60px;
+  text-align: center;
+  width: 60%;
+  height: auto;
+}
+
+.gitHubIssuesCtn {
+  display: flex;
+  flex-direction: column;
+  gap: var(--divider-margin);
+}
+
+.gitHubIssues {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  column-gap: 10px;
+  row-gap: 10px;
+}
+
+.gitHubIssuesBtn.gitHubIssuesBtn {
+  text-transform: none;
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+  width: var(--btn-width);
+  height: var(--btn-height);
+}
+
+.gitHubIssuesBtn.gitHubIssuesBtn:hover {
+  color: white;
+  background-color: var(--primary-color);
+  text-transform: none;
+  border-color: var(--primary-color)
+}
+
+.divider.divider {
+  margin-bottom: var(--divider-margin);
+  margin-top: var(--divider-margin);
+}
+
+.appSummary {
+  align-items: baseline;
+  display: flex;
+  flex-direction: column;
+  justify-content: baseline;
+  width: 50%;
+}
+
+.justifyLeft {
+  margin-right: auto;
+}
+
+.justifyRight {
+  margin-left: auto;
 }
 
 
-/* Ensure the body directly uses 100% of the viewport height */
-body,
-html {
-  height: 100%;
-  margin: 0;
-  font-family: var(--subtitle-font-family)
+.appSummaryText {
+  white-space: wrap;
+  padding-top: 30px;
+}
+
+.dividerInner {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.appSummaryIcon {
+  width: 250px;
+  height: 250px;
+}
+
+
+.appSummaryRow {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+
+.appScreenshot.appScreenshot {
+  border-radius: 15px;
+  height: auto;
+  object-fit: contain;
+  width: 100%;
+  /* Make the image width responsive to the container size */
+  max-width: 1080px;
+  /* Set a max-width for the image (you can adjust this value) */
+}
+
+
+.gwenIcon {
+  width: auto;
+  height: 50px;
+  margin-right: 5px;
+}
+
+.appLogoText {
+  display: inline-block;
+
+}
+
+
+.appLogo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-decoration: none;
+  text-transform: none;
+  color: var(--primary-font-color)
+}
+
+
+.linkStyle {
+  text-decoration: none;
+}
+
+.linkContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.separator {
+  margin: 0 5px;
+}
+
+.goldText {
+  font-weight: bold;
+  color: #D4AF37
+}
+
+
+@media screen and (max-width: 800px) {
+  .heroSection {
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    justify-content: center;
+    padding-bottom: 2vh;
+  }
+
+  .downloadCtn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    width: 100%;
+  }
+
+  .appSummaryRow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    gap: var(--divider-margin);
+    /* justify-content: space-evenly;
+    align-items: flex-start;
+    flex-wrap: wrap; */
+  }
+
+  .appSummary {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .app {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+    flex-grow: 1;
+    /* Makes the container take full width of its parent */
+    padding: 0 2vw;
+    /* Applies padding to the sides, effectively creating margins */
+    box-sizing: border-box;
+    /* Ensures padding is included in the total width calculation */
+  }
+
 }

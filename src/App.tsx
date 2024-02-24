@@ -1,5 +1,3 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Header from './components/Header'
 import { Box } from '@mui/material';
@@ -8,20 +6,30 @@ import HeroSection from './components/HeroSection';
 import { createTheme, ThemeProvider } from '@mui/material';
 import Footer from './components/Footer';
 import MainContent from './components/MainContent';
-// Create a custom MaterialUI theme
+
 const theme = createTheme({
+  palette: {
+    text: {
+      primary: '#212121',
+    }
+  },
   typography: {
+    allVariants: {
+      color: 'text.primary',
+      fontSize: '1.25rem'
+    },
     fontFamily: "'Inter', sans-serif",
     h1: {
-      fontSize: '2.5rem',
+      fontSize: '4.0rem',
       fontFamily: "'DM Sans', sans-serif",
-      // Include other styles as needed
     },
     h2: {
+      fontSize: '3.5rem',
       fontFamily: "'DM Sans', sans-serif",
-      // Include other styles as needed
+      fontWeight: "bold",
     },
     h3: {
+      fontSize: '2.0rem',
       fontFamily: "'DM Sans', sans-serif",
     },
     h4: {
@@ -31,6 +39,7 @@ const theme = createTheme({
       fontFamily: "'DM Sans', sans-serif",
     },
     h6: {
+      fontSize: '0.6rem',
       fontFamily: "'DM Sans', sans-serif",
     },
   },
@@ -40,10 +49,12 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <Box className={styles.app}>
-        <Header className={styles.header} />
-        <HeroSection className={styles.heroSection} />
-        <MainContent className={styles.mainContent} />
-        <Footer className={styles.footer} />
+        <Box className={styles.appInnerContent}>
+          <Header className={styles.header} />
+          <HeroSection className={styles.heroSection} />
+          <MainContent className={styles.mainContent} />
+          <Footer className={styles.footer} />
+        </Box>
 
       </Box>
 
