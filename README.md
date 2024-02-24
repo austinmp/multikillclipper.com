@@ -1,10 +1,9 @@
-# About
+# Developing Locally
 This repository stores the raw front end code for [multikillclipper.com](https://www.multikillclipper.com/).This is not the compiled code that is served via GitHub pages, the compiled code can be found in [this repo](https://github.com/austinmp/multi-kill-clipper/tree/gh-pages). Since [multikillclipper.com](https://www.multikillclipper.com/) is hosted using GitHub pages there's a few extra steps we need to take to take to compile and deploy this code base.
 
 * We're using the `gh-pages` npm package in order to deploy the create-react-app front end to a GitHub pages website [full details here](https://github.com/tschaub/gh-pages).
 
-## Developing Locally:
-To save the raw react changes and deploy the changes to multikillclipper.com follow these steps:
+## To save the raw react changes and deploy the changes to multikillclipper.com follow these steps:
 1. Make sure both remotes are added locally (multi-kill-clipper and multikillclipper.com):
 
 Running `git remote - v` should produce something like this
