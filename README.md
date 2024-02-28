@@ -1,4 +1,46 @@
+<<<<<<< HEAD
 # Deployment Procedure
+=======
+# Developing Locally
+This repository stores the raw front end code for [multikillclipper.com](https://www.multikillclipper.com/).This is not the compiled code that is served via GitHub pages, the compiled code can be found in [this repo](https://github.com/austinmp/multi-kill-clipper/tree/gh-pages). Since [multikillclipper.com](https://www.multikillclipper.com/) is hosted using GitHub pages there's a few extra steps we need to take to take to compile and deploy this code base.
+
+* We're using the `gh-pages` npm package in order to deploy the create-react-app front end to a GitHub pages website [full details here](https://github.com/tschaub/gh-pages).
+
+## To save the raw react changes and deploy the changes to multikillclipper.com follow these steps:
+1. Make sure both remotes are added locally (multi-kill-clipper and multikillclipper.com):
+
+Running `git remote - v` should produce something like this
+```
+multikillclipper.com    https://github.com/austinmp/multikillclipper.com.git (fetch)
+multikillclipper.com    https://github.com/austinmp/multikillclipper.com.git (push) 
+origin  https://github.com/austinmp/multi-kill-clipper.git (fetch)
+origin  https://github.com/austinmp/multi-kill-clipper.git (push)
+```
+
+2. Save raw react changes by pushing them to this repo
+```
+git add .
+git commit -m 'save react changes to multikillclipper.com repo'
+git push multikillclipper.com main
+```
+
+3. Run the deployment script. This will automatically compile the react changes and push them to [this repo](https://github.com/austinmp/multi-kill-clipper/tree/gh-pages)
+``` 
+git branch --set-upstream-to=origin/gh-pages main     (main = local branch)    
+npm run deploy
+npm run deploy -- -m "Deploy React app to GitHub Pages"
+```
+
+4. Once the script has completed switch back upstream to track this repo
+```
+git branch --set-upstream-to=multikillclipper.com/main main 
+```
+
+5. Check [multikillclipper.com](https://www.multikillclipper.com/) to make sure changes have been deployed
+
+
+## Note: Anything in the `public/` folder will be copied over directly when deploying (useful for images and other website assets)
+>>>>>>> cb8ea8d948c09add4fb886224a447c02bfc8bc72
 
 
 ## Getting Started with Create React App
