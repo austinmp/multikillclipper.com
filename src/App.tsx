@@ -6,6 +6,7 @@ import HeroSection from './components/HeroSection';
 import { createTheme, ThemeProvider } from '@mui/material';
 import Footer from './components/Footer';
 import MainContent from './components/MainContent';
+import MailchimpSignup from './components/EmailForm';
 
 const theme = createTheme({
   palette: {
@@ -52,6 +53,7 @@ function App() {
         <Box className={styles.appInnerContent}>
           <Header className={styles.header} />
           <HeroSection className={styles.heroSection} />
+          <MailchimpSignup />
           <MainContent className={styles.mainContent} />
           <Footer className={styles.footer} />
         </Box>
