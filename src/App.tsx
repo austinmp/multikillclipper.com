@@ -1,4 +1,3 @@
-import './App.css';
 import Header from './components/Header'
 import { Box } from '@mui/material';
 import styles from './multi-kill-clipper.module.css'

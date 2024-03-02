@@ -11,19 +11,26 @@
   --divider-margin: 5vh;
 }
 
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
 .app {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 100%;
+  min-width: 100vw;
   min-height: 100vh;
   flex-grow: 1;
-
   /* Makes the container take full width of its parent */
   padding: 0 5%;
   /* Applies padding to the sides, effectively creating margins */
   box-sizing: border-box;
-  /* Ensures padding is included in the total width calculation */
 }
 
 .header.header {
@@ -65,7 +72,6 @@
   flex-direction: row;
   align-content: space-between;
   justify-content: space-between;
-  /* position: absolute; */
 }
 
 
@@ -326,25 +332,63 @@
     /* Ensures padding is included in the total width calculation */
   }
 
+  .emailForm {
+    flex-direction: column;
+  }
+
 }
 
-.emailFormCtn {
-  display: flex;
+.emailFormSection {
   width: 100%;
-  flex-direction: row;
-  justify-content: center;
-  justify-items: center;
-  align-items: center;
+
 }
 
-
-.emailIframe {
-  border: none;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  height: auto;
+.emailForm {
   width: 100%;
-  min-height: 570px;
+  display: flex;
+  /* Allow items to wrap to the next line */
+  justify-content: center;
+  /* Center items horizontally */
+  align-items: center;
+  /* Align items vertically */
+  width: 100%;
+  /* Make the input field take up the full width of its parent */
+  max-width: 100%;
+  /* Prevent it from extending outside its parent */
+  box-sizing: border-box;
+}
+
+.emailForm form {
+  overflow: hidden;
+}
+
+.subscribeBtnCtn {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: auto;
+  row-gap: 2vh;
+}
+
+.optionalParent {
+  background-color: #8555d2;
+}
+
+.subscribeBtn {
+  color: #fff;
+  height: 75px;
+  width: 275px;
+  font-size: 24px;
+  font-family: "Inter", sans-serif;
+  background: linear-gradient(90deg, #a357ff 0, #8555d2);
+  box-shadow: 0 1px 17px 0 rgb(133, 85, 210);
+  text-transform: none;
+}
+
+.subscribeBtn:hover {
+  box-shadow: none;
+  cursor: pointer;
 }
