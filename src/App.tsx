@@ -48,9 +48,9 @@ const theme = createTheme({
 function App() {
   return (
     <ThemeProvider theme={theme}>
+      <Header className={styles.header} />
       <Box className={styles.app}>
         <Box className={styles.appInnerContent}>
-          <Header className={styles.header} />
           <HeroSection className={styles.heroSection} />
           <MailchimpSignup />
           <MainContent className={styles.mainContent} />

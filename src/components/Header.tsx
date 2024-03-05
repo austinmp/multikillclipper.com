@@ -11,7 +11,7 @@ type HeaderProps = {
 }
 export default function Header({ className }: HeaderProps) {
   return (
-    <AppBar className={className} elevation={10}>
+    <AppBar className={className} elevation={10} position='static'>
       <Toolbar className={styles.headerToolbar}>
         <div className={styles.appLogoCtn}>
           <a href="/" className={styles.appLogo}>
