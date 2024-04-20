@@ -1,4 +1,4 @@
-# Deployment Procedure  / Developing Locally
+# Deployment Procedure  
 This repository stores the raw front end code for [multikillclipper.com](https://www.multikillclipper.com/).This is not the compiled code that is served via GitHub pages, the compiled code can be found in [this repo](https://github.com/austinmp/multi-kill-clipper/tree/gh-pages). Since [multikillclipper.com](https://www.multikillclipper.com/) is hosted using GitHub pages there's a few extra steps we need to take to take to compile and deploy this code base.
 
 * We're using the `gh-pages` npm package in order to deploy the create-react-app front end to a GitHub pages website [full details here](https://github.com/tschaub/gh-pages).
@@ -36,11 +36,10 @@ git branch --set-upstream-to=multikillclipper.com/main main
 5. Check [multikillclipper.com](https://www.multikillclipper.com/) to make sure changes have been deployed
 
 
-## Note: Anything in the `public/` folder will be copied over directly when deploying (useful for images and other website assets)
->>>>>>> cb8ea8d948c09add4fb886224a447c02bfc8bc72
+### Note: Anything in the `public/` folder will be copied over directly when deploying (useful for images and other website assets)
 
 
-## Getting Started with Create React App
+## Create React App Local Dev
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
