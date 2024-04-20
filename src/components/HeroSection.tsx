@@ -20,7 +20,7 @@ export default function HeroSection({ className }: HeroSectionProps) {
 					variant="contained"
 					startIcon={<MicrosoftIcon />}
 					className={styles.downloadBtn}
-					href='https://github.com/austinmp/multi-kill-clipper/releases/latest/download/Multi.Kill.Clipper.exe'
+					href='https://github.com/austinmp/multi-kill-clipper/releases/latest/download/MultiKillClipper.zip'
 				>
 					<Typography fontSize={24}>Windows 64-bit</Typography>
 				</Button>
