@@ -1,8 +1,7 @@
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import styles from '../multi-kill-clipper.module.css';
-import DownloadIcon from '@mui/icons-material/Download';
-import Button from '@mui/material/Button';
+import MicrosoftIcon from '@mui/icons-material/Microsoft'; import Button from '@mui/material/Button';
 import Paper from '@mui/material/Paper'; // or '@material-ui/core/Paper' depending on the version
 
 
@@ -19,11 +18,11 @@ export default function HeroSection({ className }: HeroSectionProps) {
 				<Button
 					size="large"
 					variant="contained"
-					startIcon={<DownloadIcon />}
+					startIcon={<MicrosoftIcon />}
 					className={styles.downloadBtn}
-					href='https://github.com/austinmp/multi-kill-clipper/releases/download/v1.0-zip/multi-kill-clipper.zip'
+					href='https://github.com/austinmp/multi-kill-clipper/releases/latest/download/Multi.Kill.Clipper.exe'
 				>
-					<Typography fontSize={24}>Download</Typography>
+					<Typography fontSize={24}>Windows 64-bit</Typography>
 				</Button>
 			</div>
 			<div>

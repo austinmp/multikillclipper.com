@@ -18,45 +18,46 @@ const MailchimpForm = () => {
         width: 100%;
 
       }
-          #mc_embed_signup{
-            background:#fff; 
-            font:14px Helvetica,Arial,sans-serif;
-            display:flex;
-            justify-content: center;
-            width:100%;
-          }     
+      #mc_embed_signup{
+        background:#fff; 
+        font:14px Helvetica,Arial,sans-serif;
+        display:flex;
+        justify-content: center;
+        width:100%;
+        border:none;
+      }
 
-          #cta{
-            font-size: 3.0rem;
-            color:#212121
-            font-family: 'DM Sans',sans-serif;
-            font-weight: bold;
-            line-height: 1.2;
-            text-align:center;
-          }
+      #cta{
+        font-size: 3.0rem;
+        color:#212121
+        font-family: 'DM Sans',sans-serif;
+        font-weight: bold;
+        line-height: 1.2;
+        text-align:center;
+      }
 
-          #cta_subtext{
-            font-size: 2.0rem;
-            color:#212121
-            font-family: 'Inter', sans-serif;
-            line-height: 1.2;
-            text-align:center;
-          }
+      #cta_subtext{
+        font-size: 2.0rem;
+        color:#212121
+        font-family: 'Inter', sans-serif;
+        line-height: 1.2;
+        text-align:center;
+      }
 
-          #mc_embed_signup_scroll{
-            font-size: 1.25rem;
-            color:#212121
-            font-family: 'Inter', sans-serif;
-            line-height: 1.2;
-          }
+      #mc_embed_signup_scroll{
+        font-size: 1.25rem;
+        color:#212121
+        font-family: 'Inter', sans-serif;
+        line-height: 1.2;
+      }
 
-          #mce-EMAIL{
-            height: 40px;
-            font-size: 1.25rem;
-            color:#212121
-            font-family: 'Inter', sans-serif;
-            line-height: 1.2;
-          }
+      #mce-EMAIL{
+        height: 40px;
+        font-size: 1.25rem;
+        color:#212121
+        font-family: 'Inter', sans-serif;
+        line-height: 1.2;
+      }
 
     </style>
     <div id="mc_embed_signup">

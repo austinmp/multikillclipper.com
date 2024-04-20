@@ -60,6 +60,7 @@ body {
   width: var(--btn-width);
   height: var(--btn-height);
   justify-self: center;
+  text-wrap: nowrap;
 }
 
 
@@ -373,9 +374,6 @@ body {
   row-gap: 2vh;
 }
 
-.optionalParent {
-  background-color: #8555d2;
-}
 
 .subscribeBtn {
   color: #fff;
@@ -384,8 +382,12 @@ body {
   font-size: 24px;
   font-family: "Inter", sans-serif;
   background: linear-gradient(90deg, #a357ff 0, #8555d2);
-  box-shadow: 0 1px 17px 0 rgb(133, 85, 210);
+  box-shadow: 0 5px 17px 0 var(--primary-color);
   text-transform: none;
+  margin-top: 10px;
+  border: none;
+  transition: box-shadow 0.3s ease;
+  border: none !important;
 }
 
 .subscribeBtn:hover {
